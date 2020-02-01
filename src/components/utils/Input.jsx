@@ -13,6 +13,9 @@ export default function Input(props) {
                 className={props.classInput}
                 placeholder={props.placeholder}
                 autoComplete='off'
+                value={props.value}
+                onChange={props.onChange}
+                required={props.required}
             />
         </>
     )

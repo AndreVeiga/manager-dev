@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
+import loginReducer from './login'
 
 const reducers = {
-    field: newValue => {
-        return {value: newValue}
-    }
+    loginReducer 
 }
+
+console.log('RootReducer')
 
 export default combineReducers(reducers)

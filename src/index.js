@@ -2,15 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducer from './reducers/index'
+import reducer from './reducers/RootReducers'
 
-import App from './App'
-import Configs from './config'
+import Routes from './Routes'
 import './styles'
 
 ReactDOM.render(
     <Provider store={createStore(reducer)}>
-        {Configs()}
-        <App />
+        <Routes />
     </Provider>, 
 document.getElementById('root'))

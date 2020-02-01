@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import Input from '../utils/Input'
-import Logo from '../../img/logo-media.png'
-import Load from '../utils/Loading'
+import Logo from '../../assets/img/logo-media.png'
 
-export default function Login(props) {
+export default props => {
 
-  const [isLoad, setIsLoad] = useState(false)
-
-  const renderForm = _ => {
-    return (
-      <form className='form-signin'>
+  const [ email, setEmail ] = useState('')
+  const [ senha, setSenha ] = useState('')
+  
+  return (
+    <form className='form-signin'>
         <img className='mb-4'
           src={Logo}
           alt='Logo da Develcode'
@@ -26,6 +25,9 @@ export default function Login(props) {
           id='inputEmail'
           classInput='form-control'
           placeholder='Seu email'
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
         />
 
         <Input
@@ -35,21 +37,20 @@ export default function Login(props) {
           id='inputPassword'
           classInput='form-control'
           placeholder='Senha'
+          value={senha}
+          onChange={e => setSenha(e.target.value)}
+          required
         />
 
-        <button className='btn btn-lg btn-primary btn-block'
+        <button 
+          className='btn btn-lg btn-primary btn-block'
           type='button'
-          onClick={() => setIsLoad(true)}
+          onClick={_ => props.handleClick(email,senha)}
         >
           Login
         </button>
 
         <p className='mt-5 mb-3 text-muted'>&copy; Develcode Tecnologia 2020 </p>
       </form>
-    ) 
-  }
-
-  return (
-    !isLoad ? renderForm() : <Load />
   )
 }
