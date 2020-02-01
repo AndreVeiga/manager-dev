@@ -1,5 +1,5 @@
 import React from 'react'
 
-const Load = _ => <div class='loading'>DEVELCODE</div>
+const Load = _ => <div className='loading'>DEVELCODE</div>
 
 export default Load

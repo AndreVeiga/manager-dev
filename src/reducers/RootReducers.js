@@ -5,6 +5,4 @@ const reducers = {
     loginReducer 
 }
 
-console.log('RootReducer')
-
 export default combineReducers(reducers)
