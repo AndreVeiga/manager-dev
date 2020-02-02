@@ -1,13 +1,23 @@
 import React from 'react'
-import { Route } from 'react-router'
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { isAuth } from './config/auth'
 
 import Login from './container/login/Login'
 import Dashboard from './container/dashboard/Dashboard'
 
+const PrivateRoute = ({ component: Component, ...rest }) => (
+    <Route {...rest} render={props => (
+        isAuth
+            ? <Component {...props} />
+            : <Redirect to={{ pathname: '/', state: props.location }} />
+    )} />
+)
+
 export default props => (
-    <HashRouter>
-        <Route exact path='/' component={Login} />
-        <Route exact path='/dashboard' component={Dashboard} />
-   </HashRouter >
+    <BrowserRouter>
+        <Switch>
+            <Route exact path='/' component={Login} />
+            <PrivateRoute exact path='/dashboard' component={Dashboard} />
+        </Switch>
+    </BrowserRouter >
 )

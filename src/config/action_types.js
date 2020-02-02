@@ -5,7 +5,8 @@ const types = {
         typing: {
             email: 'TYPING_EMAIL',
             password: 'TYPING_PASSWORD'
-        }
+        }, 
+        success: 'SUCESS'
     }
 }
 

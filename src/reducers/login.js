@@ -4,7 +4,8 @@ const defaultState = {
   isLoad: false,
   error: null,
   email: '',
-  password: ''
+  password: '',
+  user: {}
 }
 
 export default (state = defaultState, action) => {
@@ -34,6 +35,14 @@ export default (state = defaultState, action) => {
         error: null,
         password: action.payload
       }
+
+    case types.login.success:
+      return {
+        ...state,
+        isLoad: false,
+        user: action.payload
+      }
+
 
     default:
       return state

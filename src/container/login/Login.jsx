@@ -27,7 +27,8 @@ const mapStateToProps = ({ loginReducer }) => {
     isLoad: loginReducer.isLoad,
     error: loginReducer.error,
     email: loginReducer.email,
-    password: loginReducer.password
+    password: loginReducer.password,
+    user: loginReducer.user
   }
 }
 
@@ -42,5 +43,6 @@ Login.propTypes = {
   loginTypingPassword: PropTypes.func.isRequired,
   error: PropTypes.string,
   email: PropTypes.string,
-  password: PropTypes.string
+  password: PropTypes.string,
+  user: PropTypes.object
 }
