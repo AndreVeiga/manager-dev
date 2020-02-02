@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
+import Toolbar from '../../components/dasboard/ToolBar'
+import Menu from '../menu/Menu'
 
 
-class Dasboard extends Component {
+class Dashboard extends Component {
 
-    render(){
-        return (
-            <h1>Teste</h1>
-        )
-    }
+	render() {
+		return (
+			<div>
+				<Toolbar title='Dashboard' />
+				<Menu />
+				<h1>Teste</h1>
+			</div>
+		)
+	}
 }
 
-export default Dasboard
+export default Dashboard

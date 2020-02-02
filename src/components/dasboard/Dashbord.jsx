@@ -1,8 +1,10 @@
 import React from 'react'
 
+const Dashboard = props => (
+  <div>
+    <h1>Dashboard</h1>
+  </div>
 
-export default function Dashboard(props) {
-    return (
-        <h1>Teste</h1>
-    )
-}
+)
+
+export default Dashboard

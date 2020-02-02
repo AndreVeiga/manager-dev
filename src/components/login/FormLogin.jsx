@@ -39,9 +39,9 @@ const FormLogin = props => {
         required
       />
 
-      { props.error && <div className='alert alert-danger' role='alert'>
-        { props.error }
-      </div> }
+      {props.error && <div className='alert alert-danger' role='alert'>
+        {props.error}
+      </div>}
 
       <button
         className='btn btn-lg btn-primary btn-block'
@@ -51,7 +51,8 @@ const FormLogin = props => {
         Login
         </button>
 
-      <p className='mt-5 mb-3 text-muted'>&copy; Develcode Tecnologia 2020 </p>
+      <p className='mt-5 mb-3 text-muted'>
+        &copy; Develcode Tecnologia {new Date().getFullYear()} </p>
     </form>
   )
 }

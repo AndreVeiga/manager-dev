@@ -18,6 +18,7 @@ export default props => (
         <Switch>
             <Route exact path='/' component={Login} />
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <Route exact path='*' component={Login} />
         </Switch>
     </BrowserRouter >
 )
