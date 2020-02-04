@@ -3,6 +3,7 @@ import EventRoundedIcon from '@material-ui/icons/EventRounded'
 import AccountCircleIcon from '@material-ui/icons/AccountCircle'
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered'
 import HomeIcon from '@material-ui/icons/Home'
+import { Link } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -13,13 +14,15 @@ export default props => {
 	return (
 		<ul className='nav flex-column flex-nowrap overflow-hidden'>
 
-			<li className='nav-item menu-item menu-first' key={1}>
-				<Button className={classes.button}>
-					<EventRoundedIcon className={classes.icon} />
-					Planilha
-			</Button>
-			</li>
-
+			<Link to='/planilha'>
+				<li className='nav-item menu-item menu-first' key={1}>
+					<Button className={classes.button}>
+						<EventRoundedIcon className={classes.icon} />
+						Planilha
+					</Button>
+				</li>
+			</Link>
+			
 			<li className='nav-item menu-item' key={2}>
 				<Button className={classes.button}>
 					<FormatListNumberedIcon className={classes.icon} />

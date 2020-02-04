@@ -4,6 +4,7 @@ import { isAuth } from './config/auth'
 
 import Login from './container/login/Login'
 import Dashboard from './container/dashboard/Dashboard'
+import Planilha from './container/spreadSheet/SpreadSheet'
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route {...rest} render={props => (
@@ -17,8 +18,9 @@ export default props => (
     <BrowserRouter>
         <Switch>
             <Route exact path='/' component={Login} />
+            <Route exact path='/planilha' component={Planilha} />
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
-            <Route exact path='*' component={Login} />
+            <Route exact path='/*' component={Login} />
         </Switch>
     </BrowserRouter >
 )

@@ -6,6 +6,8 @@
   bottom: 0;
   top: 0;
   background-color: rgba(50,50,50,1);
+  z-index: 99;
+  transition: all ease .5s;
 }
 
 .menu-column:hover {
